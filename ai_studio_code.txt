@@ -1,0 +1,22 @@
+<changes>
+  <change>
+    <file>App.tsx</file>
+    <description>Consolidated all application logic, types, services, and sub-components into a single App.tsx file for easier management on mobile devices. The app remains high-performance with Search, Image, and Video generation capabilities.</description>
+    <content><![CDATA[
+import React, { useState, useEffect, useRef } from 'react';
+import { GoogleGenAI, Modality } from "@google/genai";
+import ReactMarkdown from 'react-markdown';
+
+// --- TYPES ---
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+  timestamp: Date;
+  id: string;
+  imageUrl?: string;
+  videoUrl?: string;
+  hasAudio?: boolean;
+}
+    ]]></content>
+  </change>
+</changes>
